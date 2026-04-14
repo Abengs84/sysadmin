@@ -1,11 +1,19 @@
 Disable tips, tricks, and suggestions
 
 ```powershell
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SoftLandingEnabled" -Value 0 -Force
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SubscribedContent-338389Enabled" -Value 0 -Force
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" -Name "SubscribedContent-338393Enabled" -Value 0 -Force
-```
+$path = "HKCU:\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager"
 
+Set-ItemProperty $path "SoftLandingEnabled" 0
+Set-ItemProperty $path "SubscribedContent-338389Enabled" 0
+Set-ItemProperty $path "SubscribedContent-338393Enabled" 0
+Set-ItemProperty $path "SubscribedContent-310093Enabled" 0
+Set-ItemProperty $path "SubscribedContent-353694Enabled" 0
+Set-ItemProperty $path "SubscribedContent-353696Enabled" 0
+```
+Then restart Explorer
+```powershell
+Stop-Process -Name explorer -Force
+```
 Update with winget and Windows store
 ```powershell
 winget upgrade --all
