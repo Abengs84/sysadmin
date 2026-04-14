@@ -41,6 +41,21 @@ Note: If the system has English locale use Administrator
 net localgroup Administratörer admin /add
 ```
 
+## Time is incorrect
+
+1. Turn OFF automatic time
+
+```powershell
+Stop-Service w32time -Force
+Set-Service w32time -StartupType Disabled
+```
+2. Turn ON automatic time again
+```powershell
+Set-Service w32time -StartupType Manual
+Start-Service w32time
+w32tm /resync
+```
+
 # System Tools (Win + R)
 
 ## Device Manager
