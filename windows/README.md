@@ -49,3 +49,10 @@ gpedit.msc
 ```text
 lusrmgr.msc
 ```
+
+Download the latest Abitti2 application
+
+```powershell
+Invoke-WebRequest https://dl.abitti.fi/AbittiCandidateInstaller.msi -OutFile Abitti.msi
+msiexec /i Abitti.msi
+```
