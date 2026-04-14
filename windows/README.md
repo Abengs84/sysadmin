@@ -38,14 +38,14 @@ net localgroup Administratörer admin /add
 ## Device Manager
 ```text
 devmgmt.msc
-``` id="7v9p3k"
+```
 
 ## Local Group Policy Editor
 ```text
 gpedit.msc
-``` id="m2nq5c"
+```
 
 ## Local Users and Groups
 ```text
 lusrmgr.msc
-``` id="q8xk1p"
+```
