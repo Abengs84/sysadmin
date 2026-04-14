@@ -33,15 +33,19 @@ Note: If the system has English locale use Administrator
 net localgroup Administratörer admin /add
 ```
 
-# Windows Run Commands (Win + R)
-
-# System Tools
+# System Tools (Win + R)
 
 ## Device Manager
+```text
 devmgmt.msc
+``` id="7v9p3k"
 
-## Group Policy Editor
+## Local Group Policy Editor
+```text
 gpedit.msc
+``` id="m2nq5c"
 
 ## Local Users and Groups
+```text
 lusrmgr.msc
+``` id="q8xk1p"
